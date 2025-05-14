@@ -36,7 +36,7 @@ Runs the unit tests suite using Jest.
 Runs the e2e (end-to-end) test suite. This script requires environment variables to be set for authentication purposes, and a working VPN connection. You can use a command like:
 
 ```bash
-E2E_USER=<your-e2e-user> E2E_PASSWORD=<your-e2e-password> E2E_WORKSPACES_USER=<your-workspaces-user> E2E_WORKSPACES_PASSWORD=<your-workspaces-password> npm test
+E2E_USER=<your-e2e-user> E2E_PASSWORD=<your-e2e-password> E2E_WORKSPACES_USER=<your-workspaces-user> E2E_WORKSPACES_PASSWORD=<your-workspaces-password> npm test:e2e
 ```
 
 Replace the placeholders with appropriate values.
