@@ -67,3 +67,13 @@ Cypress.Commands.add('login', (enableWorkspaces = false) => {
     { cacheAcrossSpecs: true }
   );
 });
+
+Cypress.Commands.add('visitIAMOverview', () => {
+  cy.visit('/iam/user-access/overview');
+  cy.get('[data-ouia-component-id="ContentHeader-title"]', { timeout: 60000 }).should('be.visible');
+});
+
+Cypress.Commands.add('visitIAMWorkspaces', () => {
+  cy.visit('/iam/access-management/workspaces');
+  cy.get('[data-ouia-component-id="ContentHeader-title"]', { timeout: 30000 }).should('be.visible');
+});

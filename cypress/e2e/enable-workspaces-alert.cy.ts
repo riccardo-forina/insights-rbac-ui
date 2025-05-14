@@ -1,8 +1,7 @@
 describe('Workspaces Alert confirm path', { testIsolation: false }, () => {
   before(() => {
     cy.login(false);
-    cy.visit('/iam/user-access/overview');
-    cy.get('[data-ouia-component-id="ContentHeader-title"]', { timeout: 60000 });
+    cy.visitIAMOverview();
   });
 
   it('should be visible', () => {
@@ -27,8 +26,7 @@ describe('Workspaces Alert confirm path', { testIsolation: false }, () => {
 describe('Workspaces Alert cancel path', { testIsolation: false }, () => {
   before(() => {
     cy.login(false);
-    cy.visit('/iam/user-access/overview');
-    cy.get('[data-ouia-component-id="ContentHeader-title"]', { timeout: 30000 });
+    cy.visitIAMOverview();
   });
 
   it('should show switch toggled off when modal is cancelled', () => {
